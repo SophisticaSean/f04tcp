@@ -12,9 +12,9 @@ split_dump.each do |item|
   end
 end
 
-no_x.map! do |item|
-  item.gsub(",", "").gsub(/"/, "").gsub(/0x/, "")
-end
-
-File.write(to_write, no_x.join(" "))
+#no_x.map! do |item|
+  #item.gsub(",", "").gsub(/"/, "").gsub(/0x/, "")
+#end
+puts no_x.join("").unpack("H*")
+#File.write(to_write, no_x.join(" "))
 

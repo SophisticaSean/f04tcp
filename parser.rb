@@ -25,9 +25,9 @@ look_for = [{ :name => "caps", :type => "03", :look_for => "43 61 70 73 00" },
 to_read = ARGV[0]
 #to_write = ARGV[1]
 
-dump = IO.readlines(to_read).first.to_s
-dump_arr = dump.split
-dump_no_space = dump_arr.join()
+dump = IO.read(to_read).unpack("H*").join
+dump_arr = dump.scan(/../)
+dump_no_space = dump
 
 
 case_list = %w[00, 01, 02, 03, 04, 05, 06, 07, 08]
