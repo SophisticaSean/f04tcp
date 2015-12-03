@@ -82,6 +82,8 @@ while true do
     blarp = item
     arr << item
   end
+
+  puts arr.last
   
   stats = parse(arr.join) if arr.join.length > 500
   system("clear")
