@@ -84,6 +84,7 @@ while true do
   end
   
   stats = parse(arr.join) if arr.join.length > 500
+  system("clear")
   stats.each do |item|
     item = item.last
     puts "#{item[:name]}: #{item[:value]}"
